@@ -3,3 +3,5 @@
 /login : login page
 
 /: protected route
+
+ /chart : protected route
