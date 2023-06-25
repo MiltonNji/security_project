@@ -20,7 +20,7 @@ use App\Http\Controllers\UserController;
   //  return view('welcome');
 //});
 
-Route::get('/chart', [HouseController::class, 'generateChart'])->name('generateChart');
+
 
 Route::get('/random', [HouseController::class, 'randomPage'])->name('random-page');
 
@@ -44,4 +44,5 @@ Route::post('/reset-password', [UserController::class, 'reset'])->name('password
 Route::group(['middleware' => 'role:admin'], function () {
     Route::get('/users', [UserController::class, 'showUsers'])->name('users.index');
     Route::delete('/users/{id}', [UserController::class, 'deleteUser'])->name('users.delete');
+    Route::get('/chart', [HouseController::class, 'generateChart'])->name('generateChart');
 });
